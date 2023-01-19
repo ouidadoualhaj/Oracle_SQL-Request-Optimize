@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="utf-8">
+<title>Home</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">  
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="navbar-brand" href="/home">Home</a>
+      <a class="navbar-brand" href="/CreateRequest">Creer une Requet</a>
+      <a class="navbar-brand" href="/requests">Requtes</a>
+      <a class="navbar-brand" href="/about">A propos de nous</a>
+      <a class="navbar-brand" href="/contact">Contacter nous</a>
+      <a class="navbar-brand" href="https://learn.microsoft.com/en-us/sql/?view=sql-server-ver16">connaissances SQL</a>
+    </div>
+  </div>
+</nav>
+
+<body>
+ <div class="about-section">
+  <h1>A propos de Notre site </h1>
+  <p>Rapide, simple et fiable: Faites votre </p>
+  <p> optomisation des requtes en ligne </p>
+  </div>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="https://media.istockphoto.com/id/1180616281/fr/photo/verticale-de-jeune-homme-dans-le-t-shirt-jaune-%C3%A0-larri%C3%A8re-cour.jpg?s=612x612&w=0&k=20&c=nPkyv07IohLkuIkBlCioC7H5HmS285vYcP9ZP3jKmRY=" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Jane Doe</h2>
+        <p class="title">Fullstack developper</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS8mSSksoGN-v6ocDUbknM3sctLDRWEOQvyA&usqp=CAU" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Mike Ross</h2>
+        <p class="title">Art Director</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQO2wOCh27REIPpW-36EESL0unkS5O8ZEqKXNyKfb411v7Z72StPSYprzK8SRh-Sn_3AQ&usqp=CAU" alt="John" style="width:100%">
+      <div class="container">
+        <h2>John Doe</h2>
+        <p class="title">Client</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+
+<style>
+body {
+   background: white;
+ 	}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+p{font-size: 20px; }
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: black;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+</style>
+</html>

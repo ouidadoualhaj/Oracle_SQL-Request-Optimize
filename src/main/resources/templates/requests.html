@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="utf-8">
+<title>Optimizing SQL Requests Interface </title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">  
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="navbar-brand" href="/home">Home</a>
+      <a class="navbar-brand" href="/CreateRequest">Creer une Requete</a>
+      <a class="navbar-brand" href="/requests">Requtes</a>
+      <a class="navbar-brand" href="/about">A propos de nous</a>
+      <a class="navbar-brand" href="/contact">Contacter nous</a>
+      <a class="navbar-brand" href="https://learn.microsoft.com/en-us/sql/?view=sql-server-ver16">connaissances SQL</a>
+    </div>
+  </div>
+</nav>
+
+<body>
+<br>
+<br>
+	
+	<div style="padding-top: 5%; padding-left: 10%; padding-right: 10%;">		
+	<div style="background-color: black; margin-bottom: 10%; padding: 60px">
+		<h1 class = "text-center">All requests !</h1>
+		  <table class="table">
+		    <tr>
+		        <th>ID</th>
+		        <th>Content</th>
+		        <th>Plan d'execution</th>
+		        <th>Supprimer </th>
+		      
+		    </tr>
+		    <tr th:each="request : ${requests}">
+		        <td th:text="${request.id_request}"></td>
+		        <td th:text="${request.plan_execution}"></td>
+		        <td>
+		         <a
+							class="btn btn-success"
+							th:href="@{planExecution(id=${request.id_request}, page=${currentPage},size=${size}, motCle=${motCle})}"> Afficher Plan d'execution
+				</a>
+		        </td>
+		        <td>
+		        <a
+							onclick="javascript:return confirm('Etes vous sur de vouloir supprimer ?')"
+							class="btn btn-danger"
+							th:href="@{deleteRequest(id=${request.id_request},,size=${size}, motCle=${motCle})}">Supprimer
+				</a>
+		        </td>
+		    </tr>
+	      </table>
+	</div>	
+	
+	
+</body>
+
+<style>
+body {
+	 background-image: url('https://media.istockphoto.com/id/1257390249/vector/sql-database-vector-seamless-pattern.jpg?s=612x612&w=0&k=20&c=jTVDx3sxtSkhqJF7etbRxjb5r1W9S8gDrZtG6f1Tsso=');
+}
+p,th,h3,h1,td{
+ color: white;
+}
+
+</style>
+</html>

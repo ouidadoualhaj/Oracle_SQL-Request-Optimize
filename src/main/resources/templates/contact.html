@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="utf-8">
+<title>Home</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">  
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="navbar-brand" href="/home">Home</a>
+      <a class="navbar-brand" href="/requests">Requetes</a>
+      <a class="navbar-brand" href="/CreateRequest">Creer une Requete</a>
+      <a class="navbar-brand" href="/about">A propos de nous</a>
+      <a class="navbar-brand" href="/contact">Contacter nous</a>
+      <a class="navbar-brand" href="https://learn.microsoft.com/en-us/sql/?view=sql-server-ver16">connaissances SQL</a>
+    </div>
+  </div>
+</nav>
+
+<body>
+   <div class="container contact">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="contact-info">
+				<img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
+				<h2>Contact Us</h2>
+				<h4>We would love to hear from you !</h4>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="contact-form">
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="fname">First Name:</label>
+				  <div class="col-sm-10">          
+					<input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname">
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="lname">Last Name:</label>
+				  <div class="col-sm-10">          
+					<input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname">
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="email">Email:</label>
+				  <div class="col-sm-10">
+					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+				  </div>
+				</div>
+				<div class="form-group">
+				  <label class="control-label col-sm-2" for="comment">Comment:</label>
+				  <div class="col-sm-10">
+					<textarea class="form-control" rows="5" id="comment"></textarea>
+				  </div>
+				</div>
+				<div class="form-group">        
+				  <div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class = "btn btn-light btn-lg">Submit</button>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+<style>
+	body {
+	  background-image: url('https://media.istockphoto.com/id/1257390249/vector/sql-database-vector-seamless-pattern.jpg?s=612x612&w=0&k=20&c=jTVDx3sxtSkhqJF7etbRxjb5r1W9S8gDrZtG6f1Tsso=');
+	}
+	label{
+	color: white;
+	}
+	.contact{
+		padding: 4%;
+		height: 100%;
+		
+	}
+	.col-md-3{
+		background: black;
+        background: -webkit-linear-gradient(to right, grey, grey, black, grey);
+        background: linear-gradient(to right, grey, black , grey, black);
+		padding: 4%;
+		border-top-left-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
+	}
+	.contact-info{
+		margin-top:10%;
+	}
+	.contact-info img{
+		margin-bottom: 15%;
+		margin-left: 22%;
+	}
+	.contact-info h2{
+		margin-bottom: 10%;
+		color: white;
+	}
+	.contact-info h4{
+	  color: white;
+	}
+	.col-md-9{
+		background: black;
+		padding: 3%;
+		border-top-right-radius: 0.5rem;
+		border-bottom-right-radius: 0.5rem;
+	}
+	.contact-form label{
+		font-weight:600;
+		
+	}
+	.contact-form button{
+		margin-top: 10px;
+		font-weight: 600;
+		width: 28%;
+	}
+	.contact-form button:focus{
+		box-shadow:none;
+	}
+</style>
+</html>
